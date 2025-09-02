@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tassili RP | MTA Roleplay</title>
+  <title>Pixel RP | MTA Roleplay</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <!-- SEO -->
-  <meta name="description" content="Tassili RP سيرفر MTA Roleplay بتجربة متكاملة وقوانين واضحة.">
-  <meta name="keywords" content="MTA, Roleplay, RP, Tassili RP, رول بلاي, MTA سيرفر">
+  <meta name="description" content="Pixel RP سيرفر MTA Roleplay بتجربة متكاملة وقوانين واضحة.">
+  <meta name="keywords" content="MTA, Roleplay, RP, Pixel RP, رول بلاي, MTA سيرفر">
   <!-- خطوط -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
   <!-- أيقونات Font Awesome -->
@@ -19,57 +18,69 @@
     html{scroll-behavior:smooth;}
     /* NAV */
     nav{position:sticky;top:0;background:rgba(20,20,20,0.9);padding:12px 0;z-index:1000;display:flex;justify-content:center;}
-    nav a{margin:0 15px;padding:8px 16px;border-radius:8px; background:linear-gradient(45deg,#e2b15c,#ffdb88); color:#000;font-weight:700;transition:0.3s;}
-    nav a:hover{background:#fff;}
+    nav a{margin:0 15px;padding:8px 16px;border-radius:8px;background:linear-gradient(45deg,#9b59b6,#8e44ad);color:#fff;font-weight:700;transition:0.3s;}
+    nav a:hover{background:#fff;color:#9b59b6;}
     /* Hero */
     header{position:relative;text-align:center;padding:80px 20px;overflow:hidden;}
     header h1{font-size:2.8rem;margin-bottom:12px;}
     header p{font-size:1.2rem;margin-bottom:20px;color:#ccc;}
-    .hero-btns a{margin:0 10px;padding:12px 22px;border-radius:10px; background:linear-gradient(45deg,#e2b15c,#ffdb88); color:#000;font-weight:700;display:inline-block;transition:0.3s;}
-    .hero-btns a:hover{background:#fff;}
-    /* شعار */
+    .hero-btns a{margin:0 10px;padding:12px 22px;border-radius:10px;background:linear-gradient(45deg,#9b59b6,#8e44ad);color:#fff;font-weight:700;display:inline-block;transition:0.3s;}
+    .hero-btns a:hover{background:#fff;color:#9b59b6;}
     .logo {width:140px;height:auto;margin-bottom:20px;}
-    /* Sections */
     section{padding:60px 20px;max-width:1000px;margin:auto;}
-    section h2{font-size:2rem;margin-bottom:16px;color:#e2b15c;}
+    section h2{font-size:2rem;margin-bottom:16px;color:#9b59b6;}
     section p, section li{margin-bottom:10px;line-height:1.6;}
     ul{padding-inline-start:20px;}
-    /* Cards */
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
     .card{background:#111218;padding:20px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.5);transition:0.3s;opacity:0;transform:translateY(20px);}
     .card.show{opacity:1;transform:translateY(0);}
-    /* Footer */
     footer{text-align:center;padding:30px 20px;background:#111218;color:#aaa;}
-    footer a{color:#e2b15c;margin:0 6px;}
-    /* Particle background */
+    footer a{color:#9b59b6;margin:0 6px;}
     canvas#bgCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;}
+    /* Alert bar */
+    #alert-bar {
+      position: fixed;
+      bottom: -80px;
+      left: 0; right: 0;
+      background: #e0a100;
+      color: #000;
+      padding: 14px 20px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 16px;
+      z-index: 9999;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+      transition: bottom 0.6s ease;
+    }
+    #alert-bar.show { bottom: 0; }
   </style>
 </head>
 <body>
+
   <!-- Navigation -->
   <nav>
-    <a href="#roleplay"><i class="fa-solid fa-theater-masks"></i> رول بلاي</a>
-    <a href="#rules"><i class="fa-solid fa-scroll"></i> القوانين</a>
-    <a href="#faq"><i class="fa-solid fa-circle-question"></i> أسئلة شائعة</a>
-    <a href="staff.html"><i class="fa-solid fa-user-shield"></i> طاقم الإدارة</a>
-    <a href="https://discord.gg/JH3Eebt6" target="_blank"><i class="fa-brands fa-discord"></i> دخول الديسكورد</a>
-    <a href="mtasa://194.58.66.44:5399"><i class="fa-solid fa-right-to-bracket"></i> دخول السيرفر</a>
+    <a href="#roleplay"><i class="fa-solid fa-theater-masks"></i> Roleplay</a>
+    <a href="#rules"><i class="fa-solid fa-scroll"></i> Rules</a>
+    <a href="#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+    <a href="staff.html"><i class="fa-solid fa-user-shield"></i> Management Team</a>
+    <a href="https://discord.gg/PK7FF7ZV" target="_blank"><i class="fa-brands fa-discord"></i> Join Discord</a>
+    <a href="mtasa://185.245.99.99:22018"><i class="fa-solid fa-right-to-bracket"></i> Join Server</a>
   </nav>
 
   <!-- Hero -->
   <header>
-    <img src="images/logo.png" alt="Tassili RP Logo" class="logo">
-    <h1>Tassili RP</h1>
+    <img src="images/logo.png" alt="Pixel RP Logo" class="logo">
+    <h1>Pixel RP</h1>
     <p>سيرفر MTA Roleplay بتجربة متكاملة وقوانين واضحة.</p>
     <div class="hero-btns">
-      <a href="mtasa://194.58.66.44:5399"><i class="fa-solid fa-gamepad"></i> دخول السيرفر</a>
-      <a href="https://discord.gg/JH3Eebt6" target="_blank"><i class="fa-brands fa-discord"></i> الديسكورد</a>
+      <a href="mtasa://185.245.99.99:22018"><i class="fa-solid fa-gamepad"></i> Join Server</a>
+      <a href="https://discord.gg/PK7FF7ZV" target="_blank"><i class="fa-brands fa-discord"></i> Join Discord</a>
     </div>
   </header>
 
   <!-- Roleplay Section -->
   <section id="roleplay">
-    <h2>🎭 رول بلاي</h2>
+    <h2>🎭 Roleplay</h2>
     <p>الرول بلاي هو تمثيل شخصية داخل عالم اللعبة باحترام الأحداث والسيناريوهات.</p>
     <div class="cards">
       <div class="card">
@@ -100,7 +111,7 @@
 
   <!-- Rules Section -->
   <section id="rules">
-    <h2>📜 القوانين</h2>
+    <h2>📜 Rules</h2>
     <div class="cards">
       <div class="card">
         <h3><i class="fa-solid fa-gavel"></i> عام</h3>
@@ -130,7 +141,7 @@
 
   <!-- FAQ Section -->
   <section id="faq">
-    <h2>❓ أسئلة شائعة</h2>
+    <h2>❓ FAQ</h2>
     <div class="cards">
       <div class="card">
         <h3><i class="fa-solid fa-play"></i> كيف أبدأ رول بلاي؟</h3>
@@ -149,19 +160,33 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Tassili RP | جميع الحقوق محفوظة</p>
+    <p>© 2025 Pixel RP | جميع الحقوق محفوظة</p>
     <p>
-      <a href="#roleplay">رول بلاي</a> | 
-      <a href="#rules">القوانين</a> | 
-      <a href="#faq">أسئلة شائعة</a> | 
-      <a href="staff.html">طاقم الإدارة</a> | 
-      <a href="https://discord.gg/JH3Eebt6" target="_blank">ديسكورد</a>
+      <a href="#roleplay">Roleplay</a> | 
+      <a href="#rules">Rules</a> | 
+      <a href="#faq">FAQ</a> | 
+      <a href="staff.html">Management Team</a> | 
+      <a href="https://discord.gg/PK7FF7ZV" target="_blank">Discord</a>
     </p>
   </footer>
 
+  <!-- Alert -->
+  <div id="alert-bar">⚠️ الموقع قيد تطوير — شكر خاص للطاقم إدارة</div>
+
   <!-- Particle background -->
   <canvas id="bgCanvas"></canvas>
+
   <script>
+    // Alert
+    const alertBar = document.getElementById("alert-bar");
+    function cycleAlert() {
+      alertBar.classList.add("show");
+      setTimeout(() => { alertBar.classList.remove("show"); }, 10000);
+    }
+    cycleAlert();
+    setInterval(cycleAlert, 11000);
+
+    // Particles
     const canvas = document.getElementById('bgCanvas');
     const ctx = canvas.getContext('2d');
     let w=canvas.width=window.innerWidth;
@@ -175,27 +200,22 @@
       for(let p of particles){
         ctx.beginPath();
         ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fillStyle='white';
+        ctx.fillStyle='#9b59b6';
         ctx.globalAlpha=0.6;
         ctx.fill();
-        p.x+=p.dx;
-        p.y+=p.dy;
+        p.x+=p.dx; p.y+=p.dy;
         if(p.x<0||p.x>w)p.dx*=-1;
         if(p.y<0||p.y>h)p.dy*=-1;
       }
       requestAnimationFrame(animate);
     }
     animate();
-    window.addEventListener('resize',()=>{
-      w=canvas.width=window.innerWidth;
-      h=canvas.height=window.innerHeight;
-    });
+    window.addEventListener('resize',()=>{ w=canvas.width=window.innerWidth; h=canvas.height=window.innerHeight; });
+
+    // Scroll animations
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('show');
-          observer.unobserve(e.target);
-        }
+        if(e.isIntersecting){ e.target.classList.add('show'); observer.unobserve(e.target); }
       });
     }, {threshold:0.2});
     document.querySelectorAll('.card').forEach(card=>observer.observe(card));
